@@ -1,5 +1,5 @@
-Decoding the Boston Airbnb Market
-Leveraging Data Science to Optimize Pricing Strategies
+# Decoding the Boston Airbnb Market
+### Leveraging Data Science to Optimize Pricing Strategies
 
 **Author:** David Mulas Zelenskaya  
 **Course:** DATA 6150 - Data Science Foundations  
@@ -42,6 +42,18 @@ This repository is organized into four main folders as per the project requireme
 3.  **Modeling:** Trained models on an 80/20 train-test split.
 4.  **Evaluation:** Compared models using RMSE and R-squared metrics.
 
+## ❓ Research Questions & Answers
+This project addressed three specific analytical questions:
+
+**1. What are the main factors that influence Airbnb rental prices?**
+* **Answer:** Feature importance analysis identified **Location (Neighbourhood)** and **Room Type** as the dominant drivers. Operational metrics like `number_of_reviews` play a secondary role.
+
+**2. How do location-based features affect average rental prices?**
+* **Answer:** Location acts as a non-linear price multiplier. Specific "hotspots" (neighborhoods) interact with property characteristics to create valuation tiers that simple linear models cannot capture effectively.
+
+**3. Can we predict the price of a listing based on property characteristics?**
+* **Answer:** Yes, but with limitations. The **Random Forest** model achieved an **R² of 0.43**, significantly outperforming Linear Regression. However, roughly 50% of price variance remains unexplained, likely due to qualitative factors (photos, decor) not present in the tabular data.
+
 ## 📈 Key Results
 The **Random Forest Regression** model proved to be the superior method for predicting Airbnb prices in Boston.
 
@@ -49,11 +61,6 @@ The **Random Forest Regression** model proved to be the superior method for pred
 | :--- | :--- | :--- |
 | **Multiple Linear Regression** | $139.54 | 0.3107 |
 | **Random Forest Regression** | **$126.77** | **0.4310** |
-
-**Findings:**
-* **Location** and **Room Type** are the most significant predictors of price.
-* Pricing follows non-linear patterns; specific neighborhoods act as price multipliers that linear models fail to capture fully.
-* Operational metrics like `number_of_reviews` play a secondary role in valuation.
 
 ## 🚀 How to Run
 1.  Clone this repository.
